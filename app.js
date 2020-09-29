@@ -1,4 +1,4 @@
-const autos = ["audi", "bmw", "volkswagen", "fiat", "toyota", "mercedes-benz", "volvo"];
+// const autos = ["audi", "bmw", "volkswagen", "fiat", "toyota", "mercedes-benz", "volvo"];
 
 // for (let i = 0; i < autos.length; i++) {
 //     console.log(autos[i]);
@@ -6,10 +6,10 @@ const autos = ["audi", "bmw", "volkswagen", "fiat", "toyota", "mercedes-benz", "
 
 // console.log(typeof(autos));
 
-autos.forEach(function (auto, o, autos) {
-    autos;
-    console.log(`${o}: ${auto} внутри массива ${autos}`);
-});
+// autos.forEach(function (auto, o, autos) {
+//     autos;
+//     console.log(`${o}: ${auto} внутри массива ${autos}`);
+// });
 
 // for (i = 0; i <= autos.length; i++) {
 //     console.log(autos[i]);
@@ -18,3 +18,16 @@ autos.forEach(function (auto, o, autos) {
 // for (let auto of autos) {
 //     console.log(auto);
 // }
+(function() {
+    "use strict";
+    function cons(from, text = "текст не добавлен") {
+        return;
+      }
+      
+    function showMessage(from, text = cons()) {
+        console.log( from + ": " + text );
+      }
+    showMessage('Aня', `привет`);
+    showMessage('Aня');
+    
+})()
