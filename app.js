@@ -1,33 +1,8 @@
-// const autos = ["audi", "bmw", "volkswagen", "fiat", "toyota", "mercedes-benz", "volvo"];
+const engeneer = {
+    name: 'Ivan',
+    age: 25,
 
-// for (let i = 0; i < autos.length; i++) {
-//     console.log(autos[i]);
-// }
+}
 
-// console.log(typeof(autos));
-
-// autos.forEach(function (auto, o, autos) {
-//     autos;
-//     console.log(`${o}: ${auto} внутри массива ${autos}`);
-// });
-
-// for (i = 0; i <= autos.length; i++) {
-//     console.log(autos[i]);
-// }
-
-// for (let auto of autos) {
-//     console.log(auto);
-// }
-(function() {
-    "use strict";
-    function cons(from, text = "текст не добавлен") {
-        return;
-      }
-      
-    function showMessage(from, text = cons()) {
-        console.log( from + ": " + text );
-      }
-    showMessage('Aня', `привет`);
-    showMessage('Aня');
-    
-})()
+let string3 = String(56456345);
+console.log(string3);
