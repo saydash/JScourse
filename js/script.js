@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded',() => {
             "Лига справедливости",
             "Ла-ла лэнд",
             "Одержимость",
-            "Скотт Пилигрим против..."
+            "Скотт Пилигрим против...",
+            "Во все тяжкие"
         ]
     };
     
@@ -35,16 +36,29 @@ document.addEventListener('DOMContentLoaded',() => {
         checkbox = addForm.querySelector('[type=checkbox]');
 
     addForm.addEventListener('submit', (e) => {
-        e.preventDefault;
+        e.preventDefault();
         const newFilm = addInput.value;
         const favorite = checkbox.checked;
-        movieDB.movies.push(newFilm);
-        movieList.innerHTML = "";
-        sortArr(movieDB.movies);
-        createMovieList(movieDB.movies, movieList);
-        addForm.reset();
-      
+        
+        if (newFilm) {
+            movieDB.movies.push(newFilm);
+            sortArr(movieDB.movies);
+            createMovieList(movieDB.movies, movieList);
+        };
+        
+        
+        e.target.reset();
+        // function checkLenght() {
+        //     if (newFilm.lenght >= 21) {
+        //         newFilm.slice(20);
+
+        //     };
+        // };
     });    
+
+    
+    
+
 
     const deleteAdv = (arr) => {
         arr.forEach(item => {
@@ -65,9 +79,8 @@ document.addEventListener('DOMContentLoaded',() => {
         arr.sort();
     };
 
-    
-        
     function createMovieList(films, parent) {
+        movieList.innerHTML = "";
         films.forEach((film, i) => {
             parent.innerHTML += `
                 <li class="promo__interactive-item">${i + 1} ${film} 
@@ -76,8 +89,10 @@ document.addEventListener('DOMContentLoaded',() => {
             `;
         });
     };
+        
+    
 
-    movieList.innerHTML = "";
+    // movieList.innerHTML = "";
     deleteAdv(promo);
     makeChanges();
     sortArr(movieDB.movies);
