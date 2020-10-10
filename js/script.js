@@ -33,8 +33,21 @@ document.addEventListener('DOMContentLoaded',() => {
         movieList = document.querySelector('.promo__interactive-list'),
         addForm = document.querySelector('form.add'),
         addInput = addForm.querySelector('.adding__input'),
-        checkbox = addForm.querySelector('[type=checkbox]');
-
+        checkbox = addForm.querySelector('[type=checkbox]'),
+        h1Title = document.querySelector('.promo__title');
+    
+    h1Title.addEventListener('click', () => {
+        if (mainContent.classList.contains('promo__bg')) {
+            console.log(mainContent.classList);
+            mainContent.classList.replace('promo__bg','promo__bg_alt');
+        }
+        else {
+            console.log(mainContent.classList);
+            mainContent.classList.replace('promo__bg_alt','promo__bg');
+        };
+        
+    });    
+    // console.log(mainContent.classList.item(1));
     addForm.addEventListener('submit', (e) => {
         e.preventDefault();
         let newFilm = addInput.value;
@@ -72,7 +85,7 @@ document.addEventListener('DOMContentLoaded',() => {
     
     const makeChanges = () => {
         genre.textContent = "Драма";
-        mainContent.style.background = "url('/img/bg.jpg')";
+        
     };
     
     
