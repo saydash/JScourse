@@ -47,7 +47,17 @@ document.addEventListener('DOMContentLoaded',() => {
         };
         
     });    
-    // console.log(mainContent.classList.item(1));
+
+    const row = document.querySelector('.row');
+    const btn = document.querySelector('.btn');
+
+    
+    row.addEventListener('click', e => {
+        if (e.target && e.target.classList.contains('btn')) {
+            row.classList.add('row_alt')
+        }
+    });
+    console.log(mainContent.classList.item(1));
     addForm.addEventListener('submit', (e) => {
         e.preventDefault();
         let newFilm = addInput.value;

@@ -246,6 +246,24 @@
                     transform: scale(0.95);
                 }
             }
+            .row {
+                display: flex;
+                flex-direction: row;
+                background-color: gray;
+                justify-content: space-between;
+                align-items: center;
+                margin: 10px;
+                .btn {
+                    background-color: yellow;
+                    width: 20px;
+                    height: 20px;
+                    padding: 3px;
+                    margin: 3px;
+                }
+            }
+            .row_alt {
+                background-color: red;
+            } 
         }
     }
     &__adv {
